@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyChainManagementSystem", "SupplyChainManagementSystem\SupplyChainManagementSystem.csproj", "{B76D2EA7-EC9B-4BA3-89CF-3830D70C288A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyChainManagementSystem.Server", "SupplyChainManagementSystem.Server\SupplyChainManagementSystem.Server.csproj", "{9DB42280-C5BC-4F1D-9B7D-865005413DB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyChainManagementSystem.Client", "SupplyChainManagementSystem.Client\SupplyChainManagementSystem.Client.csproj", "{DB1F2F15-BDE3-4E03-9400-7103D46B3C03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyChainManagementSystem.Shared", "SupplyChainManagementSystem.Shared\SupplyChainManagementSystem.Shared.csproj", "{68DCACE2-1F4C-4979-9F62-1F9BD9A3A11B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{B76D2EA7-EC9B-4BA3-89CF-3830D70C288A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B76D2EA7-EC9B-4BA3-89CF-3830D70C288A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B76D2EA7-EC9B-4BA3-89CF-3830D70C288A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DB42280-C5BC-4F1D-9B7D-865005413DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB42280-C5BC-4F1D-9B7D-865005413DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB42280-C5BC-4F1D-9B7D-865005413DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB42280-C5BC-4F1D-9B7D-865005413DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1F2F15-BDE3-4E03-9400-7103D46B3C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1F2F15-BDE3-4E03-9400-7103D46B3C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1F2F15-BDE3-4E03-9400-7103D46B3C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1F2F15-BDE3-4E03-9400-7103D46B3C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68DCACE2-1F4C-4979-9F62-1F9BD9A3A11B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68DCACE2-1F4C-4979-9F62-1F9BD9A3A11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68DCACE2-1F4C-4979-9F62-1F9BD9A3A11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68DCACE2-1F4C-4979-9F62-1F9BD9A3A11B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

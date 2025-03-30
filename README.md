@@ -9,3 +9,12 @@ This application is a simplified example of a microservices application.
 As before, I'm using .NET 7 for the Blazor Server application. However, Joydip Kanjilal mentioned this time that .NET 7 is the last version that will support creating Blazor Server applications which easily allows for the navigation that it does. Microsoft removed that functionality with .NET 8 and newer.
 
 The other thing is, following the instructions on p. 48 of that article, I will leave "Configure for HTTPS" checkbox, checked.
+
+## Added three Blazor WebAssembly projects
+
+I added three Blazor WebAssembly projects to this solution. They are named:
+- SupplyChainManagementSystem.Server
+- SupplyChainManagementSystem.Client
+- SupplyChainManagementSystem.Shared
+
+And they're all created using .NET 9. With HTTPS enabled. But this time I left off the sample pages.
