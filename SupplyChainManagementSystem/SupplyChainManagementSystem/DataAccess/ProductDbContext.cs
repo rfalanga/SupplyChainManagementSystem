@@ -19,6 +19,18 @@ namespace SupplyChainManagementSystem.DataAccess
         }
 
         public DbSet<Product> Products { get; set; } = default!;
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Models.Product>().ToTable("Product");
+
+            modelBuilder.Entity<Models.Product>().HasKey(p => p.Product_Id);
+
+            var products = GenerateProductData();
+
+            modelBuilder.Entity<Models.Product>().HasData(products);
+        }
+
         private Product[] GenerateProductData()
         {
             var productFaker = new Faker<Product>()
@@ -29,6 +41,8 @@ namespace SupplyChainManagementSystem.DataAccess
                 .RuleFor(p => p.Product_Price, f => decimal.Parse(f.Commerce.Price(1, 1000)))
                 .RuleFor(p => p.Product_Quantity, f => f.Random.Int(1, 100))
                 .RuleFor(p => p.Created_At, f => DateTime.Now);
+
+            return productFaker.Generate(count: 5).ToArray();
         }
     }
 
