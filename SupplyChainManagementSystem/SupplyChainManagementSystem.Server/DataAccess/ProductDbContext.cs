@@ -15,7 +15,7 @@ namespace SupplyChainManagementSystem.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
+            _ = optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")).EnableSensitiveDataLogging();
         }
 
         public DbSet<Product> Products { get; set; } = default!;
