@@ -12,5 +12,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddDbContext<ProductDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// This is what was in the article:
+// options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"])
 
 await builder.Build().RunAsync();
