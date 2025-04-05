@@ -1,6 +1,6 @@
 ﻿using Bogus;
 using Microsoft.EntityFrameworkCore;
-using SupplyChainManagementSystem.Models;
+using SupplyChainManagementSystem.Server.Models;
 
 namespace SupplyChainManagementSystem.DataAccess
 {
@@ -22,16 +22,16 @@ namespace SupplyChainManagementSystem.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Models.Product>().ToTable("Product");
+            modelBuilder.Entity<Product>().ToTable("Product");
 
-            modelBuilder.Entity<Models.Product>().HasKey(p => p.Product_Id);
+            modelBuilder.Entity<Product>().HasKey(p => p.Product_Id);
 
             var products = GenerateProductData();
 
-            modelBuilder.Entity<Models.Product>().HasData(products);
+            modelBuilder.Entity<Product>().HasData(products);
         }
 
-        private Product[] GenerateProductData()
+        private static Product[] GenerateProductData()
         {
             var productFaker = new Faker<Product>()
                 .RuleFor(p => p.Product_Id, f => Guid.NewGuid())

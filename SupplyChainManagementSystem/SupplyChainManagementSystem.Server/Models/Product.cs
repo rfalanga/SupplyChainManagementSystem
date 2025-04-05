@@ -1,4 +1,4 @@
-﻿namespace SupplyChainManagementSystem.Models
+﻿namespace SupplyChainManagementSystem.Server.Models
 {
     public record Product
     {
