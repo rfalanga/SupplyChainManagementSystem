@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SupplyChainManagementSystem.Server.Models;
 
-namespace SupplyChainManagementSystem.DataAccess
+namespace SupplyChainManagementSystem.Server.DataAccess
 {
     public class ProductDbContext : DbContext
     {
