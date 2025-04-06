@@ -2,7 +2,7 @@
 
 namespace SupplyChainManagementSystem.Server.DataAccess
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : IProductRepository // In the article this class didn't reference IProductRepository (huh?)
     {
         private readonly object _productDbContext;
 
