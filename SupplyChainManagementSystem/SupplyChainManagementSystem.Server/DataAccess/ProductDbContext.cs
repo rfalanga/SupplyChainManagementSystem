@@ -18,7 +18,7 @@ namespace SupplyChainManagementSystem.Server.DataAccess
             _ = optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")).EnableSensitiveDataLogging();
         }
 
-        public DbSet<Product> Products { get; set; } = default!;
+        public DbSet<Product> Products { get; set; } = default!;    // This property wasn't in the original article
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

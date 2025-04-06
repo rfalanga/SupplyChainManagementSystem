@@ -4,7 +4,7 @@ namespace SupplyChainManagementSystem.Server.DataAccess
 {
     public class ProductRepository : IProductRepository // In the article this class didn't reference IProductRepository (huh?)
     {
-        private readonly object _productDbContext;
+        private readonly ProductDbContext _productDbContext;
 
         public ProductRepository(ProductDbContext productDbContext)
         {
@@ -28,9 +28,9 @@ namespace SupplyChainManagementSystem.Server.DataAccess
             throw new NotImplementedException();
         }
 
-        public Task<Product> GetProductByIdAsync(Guid id)
+        public async Task<Product> GetProductByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(_productDbContext.Products.FirstOrDefault(p => p.Product_Id == id)); 
         }
 
         public Task UpdateAsync(Product product)
