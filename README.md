@@ -12,9 +12,12 @@ The other thing is, following the instructions on p. 48 of that article, I will 
 
 ## Added three Blazor WebAssembly projects
 
-I added three Blazor WebAssembly projects to this solution. They are named:
+I added two Blazor WebAssembly projects to this solution. They are named:
 - SupplyChainManagementSystem.Server
 - SupplyChainManagementSystem.Client
-- SupplyChainManagementSystem.Shared
 
 And they're all created using .NET 9. With HTTPS enabled. But this time I left off the sample pages.
+
+### The Share project
+
+SupplyChainManagementSystem.Shared is a Class Library project
