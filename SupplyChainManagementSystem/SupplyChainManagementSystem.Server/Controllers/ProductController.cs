@@ -1,6 +1,6 @@
 ﻿using SupplyChainManagementSystem.Server.DataAccess;
-using System.Web.Http;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SupplyChainManagementSystem.Server.Controllers
 {
