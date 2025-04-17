@@ -1,5 +1,8 @@
 ﻿using SupplyChainManagementSystem.Server.Models;
 
+/*
+ * This is from Listing 3 on the CODE Magazine article of March/April 2025
+ */
 namespace SupplyChainManagementSystem.Server.DataAccess
 {
     public class ProductRepository : IProductRepository // In the article this class didn't reference IProductRepository (huh?)
@@ -28,9 +31,9 @@ namespace SupplyChainManagementSystem.Server.DataAccess
             throw new NotImplementedException();
         }
 
-        public async Task<Product> GetProductByIdAsync(Guid id)
+        public async Task<Product> GetProductByIdAsync(Guid Id)
         {
-            return await Task.FromResult(_productDbContext.Products.FirstOrDefault(p => p.Product_Id == id)); 
+            return await Task.FromResult(_productDbContext.Products.FirstOrDefault(p => p.Product_Id == Id)); 
         }
 
         public Task UpdateAsync(Product product)
