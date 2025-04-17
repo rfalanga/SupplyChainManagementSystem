@@ -44,18 +44,6 @@ namespace SupplyChainManagementSystem.Server.DataAccess
 
             return productFaker.Generate(count: 5).ToArray();
         }
-
-        private static Supplier[] GenerateSupplierData()
-        {
-            var supplierFaker = new Faker<Supplier>()
-                .RuleFor(s => s.Id, f => Guid.NewGuid())
-                .RuleFor(s => s.Supplier_Name, f => f.Company.CompanyName())
-                .RuleFor(s => s.Supplier_Contact, f => f.Phone.PhoneNumber())
-                .RuleFor(s => s.Supplier_Email, f => f.Internet.Email())
-                .RuleFor(s => s.Supplier_Address, f => f.Address.FullAddress());
-            
-            return supplierFaker.Generate(count: 5).ToArray();
-        }
     }
 
 }
