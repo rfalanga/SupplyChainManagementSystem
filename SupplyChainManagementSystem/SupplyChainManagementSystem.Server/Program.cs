@@ -15,4 +15,7 @@ builder.Services.AddDbContext<ProductDbContext>(options =>
 // This is what was in the article:
 // options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"])
 
+builder.Services.AddDbContext<SupplierDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 await builder.Build().RunAsync();
