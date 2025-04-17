@@ -1,40 +1,23 @@
-﻿namespace SupplyChainManagementSystem.Server.DataAccess
+﻿using Microsoft.EntityFrameworkCore;
+using SupplyChainManagementSystem.Server.Models;
+namespace SupplyChainManagementSystem.Server.DataAccess
 {
     public class SupplierRepository : ISupplierRepository
     {
-        private readonly SupplyChainDbContext _context;
-        public SupplierRepository(SupplyChainDbContext context)
+        private readonly SupplierDbContext _supplierDbContext;
+
+        public SupplierRepository(SupplierDbContext supplierDbContext)
         {
-            _context = context;
+            _supplierDbContext = supplierDbContext;
         }
-        public async Task<IEnumerable<Supplier>> GetAllSuppliersAsync()
+
+        public async Task<List<Supplier>> GetSuppliersAsync()
         {
-            return await _context.Suppliers.ToListAsync();
+            return await _supplierDbContext.Suppliers.ToListAsync();
         }
-        public async Task<Supplier> GetSupplierByIdAsync(int id)
+        public async Task<Supplier> GetSupplierByIdAsync(Guid Id)
         {
-            return await _context.Suppliers.FindAsync(id);
+            return await Task.FromResult(_supplierDbContext.Suppliers.FirstOrDefault(s => s.Id == Id));
         }
-        public async Task AddSupplierAsync(Supplier supplier)
-        {
-            await _context.Suppliers.AddAsync(supplier);
-            await _context.SaveChangesAsync();
-        }
-        public async Task UpdateSupplierAsync(Supplier supplier)
-        {
-            _context.Suppliers.Update(supplier);
-            await _context.SaveChangesAsync();
-        }
-        public async Task DeleteSupplierAsync(int id)
-        {
-            var supplier = await GetSupplierByIdAsync(id);
-            if (supplier != null)
-            {
-                _context.Suppliers.Remove(supplier);
-                await _context.SaveChangesAsync();
-            }
-        }
-    }
-    {
     }
 }
